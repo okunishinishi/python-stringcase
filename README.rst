@@ -3,10 +3,10 @@ stringcase
 
 Convert string cases between camel case, pascal case, snake case etc...
 
-|Build Status| |PyPI Version|
+|build_status_badge| |pypi_version_badge|
 
 Usage
-~~~~~
+-----
 
 .. code:: python
 
@@ -36,42 +36,27 @@ Usage
     stringcase.uppercase('foo_bar_baz') # => "FOO_BAR_BAZ"
     stringcase.uppercase('FooBarBaz') # => "FOOBARBAZ"
 
- ### Install
+
+Install
+-------
 
 ::
 
     $ pip install stringcase
 
- License ------- This software is released under the `MIT
-License <https://github.com/okunishinishi/python-stringcase/blob/master/LICENSE>`__.
+License
+-------
 
- About this project --------
+This software is released under the `MIT License <https://github.com/okunishinishi/python-stringcase/blob/master/LICENSE>`__.
 
-|Bitdeli Badge|
 
- ### Author
+Author
+------
 
 -  `Taka Okunishi <http://okunishitaka.com>`__
 
- ### Donation
-
-Support this project and `others by
-okunishinishi <https://gratipay.com/okunishinishi/>`__ via
-`gratipay <https://gratipay.com/okunishinishi/>`__.
-
-` <https://gratipay.com/okunishinishi/>`__
-
-.. raw:: html
-
-   <!-- Links start -->
-
-.. raw:: html
-
-   <!-- Links end-->
-
-.. |Build Status| image:: http://img.shields.io/travis/okunishinishi/python-stringcase.svg?style=flat
+.. |build_status_badge| image:: http://img.shields.io/travis/okunishinishi/python-stringcase.svg?style=flat
    :target: http://travis-ci.org/okunishinishi/python-stringcase
-.. |PyPI Version| image:: https://img.shields.io/pypi/v/stringcase.svg
+.. |pypi_version_badge| image:: https://img.shields.io/pypi/v/stringcase.svg
    :target: https://pypi.python.org/pypi/stringcase
-.. |Bitdeli Badge| image:: https://d2weczhvl823v0.cloudfront.net/okunishinishi/python-stringcase/trend.png
-   :target: https://bitdeli.com/free
+
