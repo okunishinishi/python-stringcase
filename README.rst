@@ -3,7 +3,7 @@ stringcase
 
 Convert string cases between camel case, pascal case, snake case etc...
 
-|build_status_badge| |pypi_version_badge|
+|build_status_badge| |coverage_badge| |pypi_version_badge|
 
 Usage
 -----
@@ -57,6 +57,8 @@ Author
 
 .. |build_status_badge| image:: http://img.shields.io/travis/okunishinishi/python-stringcase.svg?style=flat
    :target: http://travis-ci.org/okunishinishi/python-stringcase
+.. |coverage_badge| image::http://img.shields.io/coveralls/apeman-repo/apeman-task-contrib-coz.svg?style=flat
+   :target: https://coveralls.io/github/apeman-repo/apeman-task-contrib-coz
 .. |pypi_version_badge| image:: https://img.shields.io/pypi/v/stringcase.svg
    :target: https://pypi.python.org/pypi/stringcase
 

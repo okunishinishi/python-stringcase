@@ -1,12 +1,15 @@
 language: python
-
 python:
-  - "3.2"
-
+- '3.2'
 install:
-  - "pip install coverage"
-
+- pip install coverage
+- pip install coveralls
 script:
-  - "python -m unittest -v stringcase_test.py"
-  - "coverage run -m unittest stringcase_test"
-  - "coverage html -d docs/report/coverage/"
+- python -m unittest -v stringcase_test.py
+- coverage run -m unittest stringcase_test
+- coverage html -d docs/report/coverage/
+after_success:
+- coveralls
+env:
+  global:
+    secure: Lhq/5AU9a3+PNYdWOC2P4NsnOM/e8OSUtbAlp5TuiCbzbyjE3SVeUlHt9LGlAtPc8tU2Tla1tQIerPyL2ZN5XMI6JDxhmKfXYVQ7CT9hAigvJvjPxR8eIcFFWmZBJe6vL0Eq4Qi/kBugit7WUgnzyS1n5fuBAJLFnH5iww0+6oZ0T2arDGQfz6ftl0KLEqeFUuXhSfPcG7+8qvFG0e/l4nVUhyCiAUw006SXqkq4TFN4MKesneN084h0gjjZz2hZQHAVihIqXRfQWbzKuihCIGwNVvczjxycK7Tw1xHDjRIsrYw4qNthTkXFWyvt+9Kdpt0arR3LU0AuE3PTPrlumW679mq8IBn7onO7KJUlcVLpUHZoR476XqxgQy51pCyp69/Q/1kD2eJt6dbVc1/o3rA/D1hHnLsWkDQ/O0T8s+nwLS1DAoGFepDGrLvE7yEmSXWiZ6oc9stde13qqb/UmZxJV3nwfrMLT12V11MWHE++akJ88Q0YXAMdXrOkkSU0+7yXO/6VWu1pH4PEWkzPbuTd6tOvr9t9mlpEYI3wqIzMSCe98K7MOdqD+yN9EIkEYUn2m3hF3zc3nTg/Xwov7dOlxBziTNy7yP+5tUuInZiqNs+roQxUedAPS8FDgpj+a7RcFE527PtplMYjAgiFfIk+fzOqcC4SHGKYNxSVLRs=
