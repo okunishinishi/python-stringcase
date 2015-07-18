@@ -2,14 +2,14 @@ from distutils.core import setup
 
 setup(
     name='stringcase',
-    version='1.0.3',
+    version='1.0.4',
     py_modules=[
         'stringcase'
     ],
     url='https://github.com/okunishinishi/python-stringcase',
     license='MIT',
     author='Taka Okunishi',
-    author_email='',
+    author_email='okunishitaka.com@gmail.com',
     description='String case converter.',
     long_description=open('./README.rst').read()
 )
