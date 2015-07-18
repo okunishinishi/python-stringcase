@@ -149,3 +149,8 @@ class StringcaseTest(TestCase):
 
         eq('foo bar baz', trimcase(' foo bar baz '))
         eq('', trimcase(''))
+
+
+if __name__ == '__main__':
+    from unittest import main
+    main()

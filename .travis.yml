@@ -1,0 +1,7 @@
+language: python
+
+python:
+  - "3.2"
+
+script:
+  - "python stringcase_test.py"
