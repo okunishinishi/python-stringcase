@@ -77,6 +77,7 @@ Support this project and [others by okunishinishi][my_gratipay_url] via [gratipa
 [my_travis_url]: http://travis-ci.org/okunishinishi/python-stringcase
 [my_travis_badge_url]: http://img.shields.io/travis/okunishinishi/python-stringcase.svg?style=flat
 [my_license_url]: https://github.com/okunishinishi/python-stringcase/blob/master/LICENSE
+[my_gratipay_url]: https://gratipay.com/okunishinishi/
 [my_gratipay_budge_url]: http://img.shields.io/gratipay/okunishinishi.svg?style=flat
 [my_tag_url]: http://github.com/okunishinishi/python-stringcase/releases/tag/
 [my_tag_badge_url]: http://img.shields.io/github/tag/okunishinishi/python-stringcase.svg?style=flat
