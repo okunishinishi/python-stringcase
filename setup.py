@@ -11,5 +11,5 @@ setup(
     author='Taka Okunishi',
     author_email='okunishitaka.com@gmail.com',
     description='String case converter.',
-    long_description=open('./README.rst').read()
+    long_description=open('./README.txt').read()
 )
