@@ -5,5 +5,8 @@ BASE_DIR=$(cd "${HERE}/.." && pwd)
 
 cd "${BASE_DIR}"
 
-python setup.py bdist
-python setup.py register -r pypi
+python setup.py sdist upload -r pypi
+
+git add . -A
+git commit -m 'Version up'
+git push

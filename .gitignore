@@ -27,6 +27,8 @@ build/Release
 
 node_modules
 
+*.pyc
+
 venv
 .DS_Store
 .idea
