@@ -4,6 +4,7 @@ stringcase
 Convert string cases between camel case, pascal case, snake case etc...
 
 [![Build Status][my_travis_badge_url]][my_travis_url]
+[![PyPI Version][my_pypi_badge_url]][my_pypi_url]
 
 
 ### Usage
@@ -72,6 +73,8 @@ Support this project and [others by okunishinishi][my_gratipay_url] via [gratipa
 <!-- Links start -->
 
 [bitdeli_url]: https://bitdeli.com/free
+[my_pypi_url]: https://pypi.python.org/pypi/stringcase
+[my_pypi_badge_url]: https://img.shields.io/pypi/v/stringcase.svg
 [my_bitdeli_badge_url]: https://d2weczhvl823v0.cloudfront.net/okunishinishi/python-stringcase/trend.png
 [my_repo_url]: https://github.com/okunishinishi/python-stringcase
 [my_travis_url]: http://travis-ci.org/okunishinishi/python-stringcase
