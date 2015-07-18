@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='stringcase',
-    version='1.0.4',
+    version='1.0.6',
     py_modules=[
         'stringcase'
     ],
@@ -11,5 +11,5 @@ setup(
     author='Taka Okunishi',
     author_email='okunishitaka.com@gmail.com',
     description='String case converter.',
-    long_description=open('./README.txt').read()
+    long_description=open('./README.rst').read()
 )

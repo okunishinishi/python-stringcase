@@ -3,5 +3,10 @@ language: python
 python:
   - "3.2"
 
+install:
+  - "pip install coverage"
+
 script:
-  - "python stringcase_test.py"
+  - "python -m unittest -v stringcase_test.py"
+  - "coverage run -m unittest stringcase_test"
+  - "coverage html -d docs/report/coverage/"

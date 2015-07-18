@@ -1,8 +1,14 @@
-'''
-Unit test for stringcase
-'''
+"""Unit test for stringcase
+"""
 
 from unittest import TestCase
+from os import path
+import sys
+
+sys.path.append(path.dirname(__file__))
+import stringcase
+
+print("here")
 
 
 class StringcaseTest(TestCase):
@@ -153,4 +159,5 @@ class StringcaseTest(TestCase):
 
 if __name__ == '__main__':
     from unittest import main
+
     main()
