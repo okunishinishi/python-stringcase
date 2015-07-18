@@ -3,4 +3,6 @@
 HERE=$(cd "$(dirname $0)" && pwd)
 BASE_DIR=$(cd "${HERE}/.." && pwd)
 
-python setup.py upload -r pypi
+cd "${BASE_DIR}"
+
+python setup.py sdist upload -r pypi

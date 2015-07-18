@@ -1,9 +1,9 @@
 from distutils.core import setup
 
 setup(
-    name='python-stringcase',
+    name='stringcase',
     version='1.0.0',
-    packages=[
+    py_modules=[
         'stringcase'
     ],
     url='https://github.com/okunishinishi/python-stringcase',
