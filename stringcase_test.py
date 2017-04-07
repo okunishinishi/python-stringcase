@@ -156,6 +156,16 @@ class StringcaseTest(TestCase):
         eq('foo bar baz', trimcase(' foo bar baz '))
         eq('', trimcase(''))
 
+    def test_alphanumcase(self):
+        from stringcase import alphanumcase
+
+        eq = self.assertEqual
+
+        eq('FooBar', alphanumcase('_Foo., Bar'))
+        eq('Foo123Bar', alphanumcase('Foo_123 Bar!'))
+        eq('', alphanumcase(''))
+        eq('None', alphanumcase(None))
+
 
 if __name__ == '__main__':
     from unittest import main
