@@ -195,3 +195,17 @@ def uppercase(string):
     """
 
     return str(string).upper()
+
+
+def alphanumcase(string):
+    """Cuts all non-alphanumeric symbols,
+    i.e. cuts all expect except 0-9, a-z and A-Z.
+
+    Args:
+        string: String to convert.
+
+    Returns:
+        string: String with cutted non-alphanumeric symbols.
+
+    """    
+    return filter(str.isalnum, str(string))

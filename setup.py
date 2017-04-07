@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='stringcase',
-    version='1.0.6',
+    version='1.0.7',
     py_modules=[
         'stringcase'
     ],
