@@ -16,7 +16,7 @@ def camelcase(string):
 
     """
 
-    string = re.sub(r"^[\-_\.]", '', str(string))
+    string = re.sub(r"\w[\s\W]+\w", '', str(string))
     if not string:
         return string
     return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])
@@ -100,6 +100,23 @@ def pathcase(string):
     return re.sub(r"_", "/", string)
 
 
+def backslashcase(string):
+    """Convert string into spinal case.
+    Join punctuation with backslash.
+
+    Args:
+        string: String to convert.
+
+    Returns:
+        string: Spinal cased string.
+
+    """
+    str1 = re.sub(r"_", r"\\", snakecase(string))
+
+    return str1
+    # return re.sub(r"\\n", "", str1))  # TODO: make regex fot \t ...
+
+
 def sentencecase(string):
     """Convert string into sentence case.
     First letter capped and each punctuations are joined with space.
@@ -116,7 +133,8 @@ def sentencecase(string):
     if not string:
         return string
     return capitalcase(trimcase(
-        re.sub(r"[A-Z]", lambda matched: joiner + lowercase(matched.group(0)), string)
+        re.sub(r"[A-Z]", lambda matched: joiner +
+               lowercase(matched.group(0)), string)
     ))
 
 
@@ -153,9 +171,26 @@ def spinalcase(string):
     return re.sub(r"_", "-", snakecase(string))
 
 
+def dotcase(string):
+    
+    """Convert string into dot case.
+    Join punctuation with dot.
+
+    Args:
+        string: String to convert.
+
+    Returns:
+        string: Dot cased string.
+
+    """
+
+    return re.sub(r"_", ".", snakecase(string))
+
+
 def titlecase(string):
     """Convert string into sentence case.
-    First letter capped and each punctuations is capitalcase and joined with space.
+    First letter capped while each punctuations is capitalsed
+    and joined with space.
 
     Args:
         string: String to convert.
@@ -207,5 +242,6 @@ def alphanumcase(string):
     Returns:
         string: String with cutted non-alphanumeric symbols.
 
-    """    
-    return filter(str.isalnum, str(string))
+    """
+    # return filter(str.isalnum, str(string))
+    return re.sub("\W+", "", string)
