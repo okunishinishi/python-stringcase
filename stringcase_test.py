@@ -8,9 +8,6 @@ import sys
 sys.path.append(path.dirname(__file__))
 import stringcase
 
-print("here")
-
-
 class StringcaseTest(TestCase):
     def test_camelcase(self):
         from stringcase import camelcase

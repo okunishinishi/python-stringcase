@@ -16,7 +16,7 @@ def camelcase(string):
 
     """
 
-    string = re.sub(r"\w[\s\W]+\w", '', str(string))
+    string = re.sub(r"^[\-_\.]", '', str(string))
     if not string:
         return string
     return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])
@@ -134,7 +134,7 @@ def sentencecase(string):
         return string
     return capitalcase(trimcase(
         re.sub(r"[A-Z]", lambda matched: joiner +
-               lowercase(matched.group(0)), string)
+                                         lowercase(matched.group(0)), string)
     ))
 
 
@@ -172,7 +172,6 @@ def spinalcase(string):
 
 
 def dotcase(string):
-    
     """Convert string into dot case.
     Join punctuation with dot.
 
@@ -243,5 +242,4 @@ def alphanumcase(string):
         string: String with cutted non-alphanumeric symbols.
 
     """
-    # return filter(str.isalnum, str(string))
-    return re.sub("\W+", "", string)
+    return filter(str.isalnum, str(string))

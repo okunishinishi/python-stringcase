@@ -5,7 +5,7 @@ install:
 - pip install coverage
 - pip install coveralls
 script:
-- python -m unittest -v stringcase_test.py
+- python -m unittest -v stringcase_test
 - coverage run -m unittest stringcase_test
 - coverage html -d docs/report/coverage/
 after_success:
