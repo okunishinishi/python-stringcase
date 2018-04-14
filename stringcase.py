@@ -242,4 +242,4 @@ def alphanumcase(string):
         string: String with cutted non-alphanumeric symbols.
 
     """
-    return filter(str.isalnum, str(string))
+    return ''.join(filter(str.isalnum, str(string)))
