@@ -26,7 +26,7 @@ Usage
     stringcase.sentencecase('foo_bar_baz') # => "Foo bar baz"
     stringcase.sentencecase('FooBarBaz') # => "Foo bar baz"
     stringcase.snakecase('foo_bar_baz') # => "foo_bar_baz"
-    stringcase.snakecase('FooBarBaz') # => "_foo_bar_baz"
+    stringcase.snakecase('FooBarBaz') # => "foo_bar_baz"
     stringcase.spinalcase('foo_bar_baz') # => "foo-bar-baz"
     stringcase.spinalcase('FooBarBaz') # => "-foo-bar-baz"
     stringcase.titlecase('foo_bar_baz') # => "Foo Bar Baz"
