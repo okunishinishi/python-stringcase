@@ -1,11 +1,9 @@
 language: python
-python:
-- '3.2'
 install:
-- pip install coverage
-- pip install coveralls
+- pip3 install coverage
+- pip3 install coveralls
 script:
-- python -m unittest -v stringcase_test
+- python3 -m unittest -v stringcase_test
 - coverage run -m unittest stringcase_test
 - coverage html -d docs/report/coverage/
 after_success:
