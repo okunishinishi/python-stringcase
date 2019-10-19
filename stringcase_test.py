@@ -116,6 +116,10 @@ class StringcaseTest(TestCase):
         eq('_bar_baz', snakecase('.bar_baz'))
         eq('', snakecase(''))
         eq('none', snakecase(None))
+        eq('http', snakecase('HTTP'))
+        eq('http_response', snakecase('HTTPResponse'))
+        eq('d_trace', snakecase('DTrace'))
+        eq('ip_address', snakecase('IPAddress'))
 
     def test_spinalcase(self):
         from stringcase import spinalcase
