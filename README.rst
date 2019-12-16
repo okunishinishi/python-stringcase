@@ -37,6 +37,8 @@ Usage
     stringcase.uppercase('FooBarBaz') # => "FOOBARBAZ"
     stringcase.alphanumcase('_Foo., Bar') # =>'FooBar'
     stringcase.alphanumcase('Foo_123 Bar!') # =>'Foo123Bar'
+    stringcase.alphanumcase('Foo_123 Bar!', upper=False) # =>'foobar'
+    
 
 
 Install
