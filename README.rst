@@ -12,6 +12,9 @@ Usage
 
     import stringcase
     stringcase.camelcase('foo_bar_baz') # => "fooBarBaz"
+    stringcase.camelcase("_me") # => "me"
+    stringcase.camelcase("__me") # => "me"
+    stringcase.camelcase("-_me") # => 'me'
     stringcase.camelcase('FooBarBaz') # => "fooBarBaz"
     stringcase.capitalcase('foo_bar_baz') # => "Foo_bar_baz"
     stringcase.capitalcase('FooBarBaz') # => "FooBarBaz"
@@ -37,6 +40,8 @@ Usage
     stringcase.uppercase('FooBarBaz') # => "FOOBARBAZ"
     stringcase.alphanumcase('_Foo., Bar') # =>'FooBar'
     stringcase.alphanumcase('Foo_123 Bar!') # =>'Foo123Bar'
+    stringcase.alphanumcase('Foo_123 Bar!', upper=False) # =>'foobar'
+    
 
 
 Install

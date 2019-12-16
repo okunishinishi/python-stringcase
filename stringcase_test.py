@@ -158,8 +158,9 @@ class StringcaseTest(TestCase):
 
         eq = self.assertEqual
 
-        eq('FooBar', alphanumcase('_Foo., Bar'))
-        eq('Foo123Bar', alphanumcase('Foo_123 Bar!'))
+        eq('FooBar', alphanumcase('_Foo., Bar',))
+        eq('Foo123Bar', alphanumcase('Foo_123 Bar!', ))
+        eq('foo123bar', alphanumcase('Foo_123 Bar!', upper=False))
         eq('', alphanumcase(''))
         eq('None', alphanumcase(None))
 

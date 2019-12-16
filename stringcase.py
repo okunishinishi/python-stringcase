@@ -16,7 +16,7 @@ def camelcase(string):
 
     """
 
-    string = re.sub(r"^[\-_\.]", '', str(string))
+    string = re.sub(r"^[\-_\.]+", '', str(string))
     if not string:
         return string
     return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])
@@ -231,7 +231,7 @@ def uppercase(string):
     return str(string).upper()
 
 
-def alphanumcase(string):
+def alphanumcase(string, upper=True):
     """Cuts all non-alphanumeric symbols,
     i.e. cuts all expect except 0-9, a-z and A-Z.
 
@@ -242,4 +242,8 @@ def alphanumcase(string):
         string: String with cutted non-alphanumeric symbols.
 
     """
-    return ''.join(filter(str.isalnum, str(string)))
+
+    if (upper):
+        return ''.join(filter(str.isalnum, str(string)))
+    else:
+        return ''.join(filter(str.isalnum, str(string))).lower()
