@@ -12,6 +12,9 @@ Usage
 
     import stringcase
     stringcase.camelcase('foo_bar_baz') # => "fooBarBaz"
+    stringcase.camelcase("_me") # => "me"
+    stringcase.camelcase("__me") # => "me"
+    stringcase.camelcase("-_me") # => 'me'
     stringcase.camelcase('FooBarBaz') # => "fooBarBaz"
     stringcase.capitalcase('foo_bar_baz') # => "Foo_bar_baz"
     stringcase.capitalcase('FooBarBaz') # => "FooBarBaz"
