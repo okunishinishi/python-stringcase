@@ -125,6 +125,7 @@ def backslashcase(string):
 def sentencecase(string):
     """Convert string into sentence case.
     First letter capped and each punctuations are joined with space.
+    Except UnicodeEncodeErrors for Python 2 unicode character support.
 
     Args:
         string: String to convert.
@@ -151,6 +152,7 @@ def sentencecase(string):
 def snakecase(string):
     """Convert string into snake case.
     Join punctuation with underscore
+    Except UnicodeEncodeErrors for Python 2 unicode character support.
 
     Args:
         string: String to convert.
