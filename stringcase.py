@@ -7,6 +7,7 @@ import re
 
 def camelcase(string):
     """ Convert string into camel case.
+    Except UnicodeEncodeErrors for Python 2 unicode character support.
 
     Args:
         string: String to convert.
@@ -15,8 +16,12 @@ def camelcase(string):
         string: Camel case string.
 
     """
+    try:
+        string = str(string)
+    except UnicodeEncodeError:
+        string = string.encode('ascii', 'ignore')
 
-    string = re.sub(r"^[\-_\.]", '', str(string))
+    string = re.sub(r"^[\-_\.]", '', string)
     if not string:
         return string
     return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])

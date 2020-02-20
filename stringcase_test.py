@@ -23,6 +23,13 @@ class StringcaseTest(TestCase):
         eq('', camelcase(''))
         eq('none', camelcase(None))
 
+    def test_camelcase_unicode_character(self):
+        from stringcase import camelcase
+
+        eq = self.assertEqual
+
+        eq('fooBar', camelcase(u'foo_bar\u2728'))
+
     def test_capitalcase(self):
         from stringcase import capitalcase
 
