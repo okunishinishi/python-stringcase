@@ -133,8 +133,13 @@ def sentencecase(string):
         string: Sentence cased string.
 
     """
+    try:
+        string = str(string)
+    except UnicodeEncodeError:
+        string = string.encode('ascii', 'ignore')
+
     joiner = ' '
-    string = re.sub(r"[\-_\.\s]", joiner, str(string))
+    string = re.sub(r"[\-_\.\s]", joiner, string)
     if not string:
         return string
     return capitalcase(trimcase(
@@ -154,8 +159,12 @@ def snakecase(string):
         string: Snake cased string.
 
     """
+    try:
+        string = str(string)
+    except UnicodeEncodeError:
+        string = string.encode('ascii', 'ignore')
 
-    string = re.sub(r"[\-\.\s]", '_', str(string))
+    string = re.sub(r"[\-\.\s]", '_', string)
     if not string:
         return string
     return lowercase(string[0]) + re.sub(r"[A-Z]", lambda matched: '_' + lowercase(matched.group(0)), string[1:])

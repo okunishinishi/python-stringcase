@@ -101,6 +101,13 @@ class StringcaseTest(TestCase):
         eq('', sentencecase(''))
         eq('None', sentencecase(None))
 
+    def test_sentencecase_unicode_character(self):
+        from stringcase import sentencecase
+
+        eq = self.assertEqual
+
+        eq('Foo Bar', sentencecase(u'foo_bar\u2728'))
+
     def test_uppercase(self):
         from stringcase import uppercase
 
@@ -123,6 +130,13 @@ class StringcaseTest(TestCase):
         eq('_bar_baz', snakecase('.bar_baz'))
         eq('', snakecase(''))
         eq('none', snakecase(None))
+
+    def test_sentencecase_unicode_character(self):
+        from stringcase import snakecase
+
+        eq = self.assertEqual
+
+        eq('foo_bar', snakecase(u'fooBar\u2728'))
 
     def test_spinalcase(self):
         from stringcase import spinalcase
