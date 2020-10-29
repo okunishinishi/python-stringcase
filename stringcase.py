@@ -16,10 +16,8 @@ def camelcase(string):
 
     """
 
-    string = re.sub(r"^[\-_\.]", '', str(string))
-    if not string:
-        return string
-    return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])
+    string = ''.join(s.capitalize() for s in re.split('([^a-zA-Z0-9])', string) if a.isalnum())
+    return str.lower(string[:1]) + string[1:]
 
 
 def capitalcase(string):
