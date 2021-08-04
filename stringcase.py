@@ -15,12 +15,19 @@ def camelcase(string):
         string: Camel case string.
 
     """
+    
+    if text == "":
+        return text
 
-    string = re.sub(r"^[\-_\.]", '', str(lowercase(string)))
-    if not string:
-        return string
-    return lowercase(string[0]) + re.sub(r"[\-_\.\s]([a-z])", lambda matched: uppercase(matched.group(1)), string[1:])
-
+    text = text.replace("_","-")
+    lst = text.split("-")
+    for i in range(len(lst)):
+        if i == 0:
+            continue
+        else:
+            lst[i] = lst[i].capitalize()
+    
+    return "".join(lst)
 
 def capitalcase(string):
     """Convert string into capital case.
