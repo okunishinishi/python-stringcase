@@ -239,7 +239,7 @@ def alphanumcase(string):
         string: String to convert.
 
     Returns:
-        string: String with cutted non-alphanumeric symbols.
+        string: String with non-alphanumeric symbols removed.
 
     """
     return ''.join(filter(str.isalnum, str(string)))
