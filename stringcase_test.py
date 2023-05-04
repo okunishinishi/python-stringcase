@@ -1,12 +1,13 @@
 """Unit test for stringcase
 """
 
-from unittest import TestCase
-from os import path
 import sys
+from os import path
+from unittest import TestCase
 
 sys.path.append(path.dirname(__file__))
 import stringcase
+
 
 class StringcaseTest(TestCase):
     def test_camelcase(self):
@@ -22,6 +23,7 @@ class StringcaseTest(TestCase):
         eq('barBaz', camelcase('.bar_baz'))
         eq('', camelcase(''))
         eq('none', camelcase(None))
+        eq('fooBarBaz', camelcase("Foo Bar Baz"))
 
     def test_capitalcase(self):
         from stringcase import capitalcase
