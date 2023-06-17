@@ -16,11 +16,11 @@ def camelcase(string):
 
     """
     
-    if text == "":
-        return text
+    if string == "":
+        return string
 
-    text = text.replace("_","-")
-    lst = text.split("-")
+    string = string.replace("_","-")
+    lst = string.split("-")
     for i in range(len(lst)):
         if i == 0:
             continue
