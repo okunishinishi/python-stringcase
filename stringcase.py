@@ -19,7 +19,7 @@ def camelcase(string):
     if string == "":
         return string
 
-    string = re.sub(r"[_\.]","-",str(string))
+    string = re.sub(r"[_\.\s]","-", str(string))
     string = re.sub(r"\-+", "-", string)
     lst = string.split("-")
     if len(lst[0]) == 0:
