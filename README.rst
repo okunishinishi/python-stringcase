@@ -42,9 +42,18 @@ Usage
 Install
 -------
 
+Release version from pypi
 ::
 
     $ pip install stringcase
+
+Latest development version from git
+::
+
+    $ git clone https://github.com/okunishinishi/python-stringcase
+    $ cd python-stringcase
+    $ python -m build
+    $ pip install dist/*.whl
 
 License
 -------
