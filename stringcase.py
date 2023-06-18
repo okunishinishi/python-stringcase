@@ -19,15 +19,21 @@ def camelcase(string):
     if string == "":
         return string
 
-    string = string.replace("_","-")
+    string = re.sub(r"[_\.\s]","-", str(string))
+    string = re.sub(r"\-+", "-", string)
     lst = string.split("-")
+    if len(lst[0]) == 0:
+        lst = lst[1:]
     for i in range(len(lst)):
         if i == 0:
-            continue
+            st = str(lst[0])
+            st = st[0].lower() + st[1:]
+            lst[0] = st
         else:
             lst[i] = lst[i].capitalize()
-    
+
     return "".join(lst)
+
 
 def capitalcase(string):
     """Convert string into capital case.
