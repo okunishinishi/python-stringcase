@@ -160,6 +160,13 @@ def snakecase(string):
     string = re.sub(r"[\-\.\s]", '_', str(string))
     if not string:
         return string
+    if string == string.upper():
+        return string.lower()
+    # Preprocess/lowercase middle part of three or more consecutive uppercase
+    string = re.sub(
+        r"([A-Z])([A-Z]+)([A-Z](?:[^A-Z]|$))",
+        lambda match: "%s%s%s" % (match.group(1), match.group(2).lower(), match.group(3)),
+        string)
     return lowercase(string[0]) + re.sub(r"[A-Z]", lambda matched: '_' + lowercase(matched.group(0)), string[1:])
 
 
